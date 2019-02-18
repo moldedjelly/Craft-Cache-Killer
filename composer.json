@@ -1,0 +1,43 @@
+{
+    "name": "moldedjelly/craft-cache-killer",
+    "description": "A simple cache busting plugin which uses the file's modified time as a query string to force latest version to be loaded.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft cache killer"
+    ],
+    "support": {
+        "docs": "https://github.com/moldedjelly/craft-cache-killer/blob/master/README.md",
+        "issues": "https://github.com/moldedjelly/craft-cache-killer/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mat Johnson",
+            "homepage": "http://moldedjelly.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "moldedjelly\\craftcachekiller\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Cache Killer",
+        "handle": "cache-killer",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/moldedjelly/craft-cache-killer/master/CHANGELOG.md",
+        "components": {
+            "cacheKillerService": "moldedjelly\\cachekiller\\services\\CacheKillerService"
+        },
+        "class": "moldedjelly\\cachekiller\\CacheKiller"
+    }
+}
