@@ -28,12 +28,12 @@ class CacheKillerVariable
      * @param null $optional
      * @return string
      */
-    public function exampleVariable($optional = null)
-    {
-        $result = "And away we go to the Twig template...";
-        if ($optional) {
-            $result = "I'm feeling optional today...";
-        }
-        return $result;
-    }
+     public function cacheKill($publicFilePath)
+     {
+         $debugTrace = debug_backtrace();
+         $initialCalledFile = count($debugTrace) ? $debugTrace[count($debugTrace) - 1]['file'] : __FILE__;
+         $publicFolderPath = dirname($initialCalledFile);
+
+         return $publicFilePath."?v=".filemtime($publicFolderPath.$publicFilePath);
+     }
 }

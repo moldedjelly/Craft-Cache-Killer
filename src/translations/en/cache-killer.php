@@ -14,5 +14,5 @@
  * @since     1.0.0
  */
 return [
-    'Craft Cache Killer plugin loaded' => 'Craft Cache Killer plugin loaded',
+    'Cache Killer plugin loaded' => 'Cache Killer plugin loaded',
 ];

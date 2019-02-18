@@ -10,7 +10,7 @@
 
 namespace moldedjelly\cachekiller;
 
-use moldedjelly\cachekiller\services\CacheKillerService as CacheKillerServiceService;
+use moldedjelly\cachekiller\services\CacheKillerService;
 use moldedjelly\cachekiller\variables\CacheKillerVariable;
 
 use Craft;
@@ -28,7 +28,7 @@ use yii\base\Event;
  * @package   CacheKiller
  * @since     1.0.0
  *
- * @property  CacheKillerServiceService $cacheKillerService
+ * @property  CacheKillerService $cacheKillerService
  */
 class CacheKiller extends Plugin
 {
@@ -80,7 +80,7 @@ class CacheKiller extends Plugin
 
         Craft::info(
             Craft::t(
-                'craft-cache-killer',
+                'cache-killer',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),
